@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <h1></h1>
+  <p></p>
+</body>
+    <form action="login.php" method="post">
+        รหัสประจำตัว : <input type="text" name="user" id="user" required><br>
+        รหัสผ่าน : <input type="password" name="password" id="pass" required><br>
+        <select name="nation" id="nation">
+            <option value="th">ไทย</option>
+            <option value="en">อังกฤษ</option>
+        </select>
+
+        เพศ : 
+        <input type="radio" name="sex" id="sex" value="1">ชาย
+        <input type="radio" name="sex" id="sex" value="0">หญิง<br>
+        <input type="date" name="day" id="day"><br>
+        <input type="submit" value="ส่งข้อมูล">
+        <input type="reset" value="ล้างข้อมูล">
+    </form>
+</html>
