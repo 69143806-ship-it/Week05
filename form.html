@@ -1,27 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มสมัครเข้าร่วมอบรม</title>
 </head>
 <body>
-  <h1></h1>
-  <p></p>
-</body>
-    <form action="login.php" method="post">
-        รหัสประจำตัว : <input type="text" name="user" id="user" required><br>
-        รหัสผ่าน : <input type="password" name="password" id="pass" required><br>
-        <select name="nation" id="nation">
-            <option value="th">ไทย</option>
-            <option value="en">อังกฤษ</option>
-        </select>
 
-        เพศ : 
-        <input type="radio" name="sex" id="sex" value="1">ชาย
-        <input type="radio" name="sex" id="sex" value="0">หญิง<br>
-        <input type="date" name="day" id="day"><br>
-        <input type="submit" value="ส่งข้อมูล">
-        <input type="reset" value="ล้างข้อมูล">
+    <h1>แบบฟอร์มสมัครเข้าร่วมอบรม</h1>
+
+    <form action="login.php" method="POST">
+
+        <!-- ชื่อ -->
+        <label for="name">ชื่อ-นามสกุล</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <!-- อีเมล -->
+        <label for="email">อีเมล</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- เบอร์โทรศัพท์ -->
+        <label for="phone">เบอร์โทรศัพท์</label>
+        <input type="tel" id="phone" name="phone"
+               pattern="[0-9]{10}" maxlength="10" required>
+        <br><br>
+
+        <!-- วันเข้าร่วม -->
+        <label for="date">วันเข้าร่วมอบรม</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <!-- รอบอบรม -->
+        <p>เลือกรอบอบรม</p>
+
+        <input type="radio" id="morning"
+               name="session" value="รอบเช้า" required>
+        <label for="morning">รอบเช้า</label>
+
+        <input type="radio" id="afternoon"
+               name="session" value="รอบบ่าย">
+        <label for="afternoon">รอบบ่าย</label>
+        <br><br>
+
+        <!-- หัวข้อที่สนใจ -->
+        <p>หัวข้อที่สนใจ (เลือกได้หลายข้อ)</p>
+
+        <input type="checkbox" id="html"
+               name="topics[]" value="HTML">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css"
+               name="topics[]" value="CSS">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="javascript"
+               name="topics[]" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+
+        <input type="checkbox" id="php"
+               name="topics[]" value="PHP">
+        <label for="php">PHP</label>
+        <br><br>
+
+        <!-- ความคิดเห็น -->
+        <label for="comment">ความคิดเห็นเพิ่มเติม</label>
+        <br>
+        <textarea id="comment" name="comment"
+                  rows="4" cols="40"></textarea>
+        <br><br>
+
+        <!-- ปุ่มส่งข้อมูล -->
+        <button type="submit">ส่งข้อมูล</button>
+        <button type="reset">ล้างข้อมูล</button>
+
     </form>
+
+</body>
 </html>
